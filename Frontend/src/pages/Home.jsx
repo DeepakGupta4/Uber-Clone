@@ -1,16 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div>
-        <div className='bg-cover bg-center bg-[url(https://images.unsplash.com/photo-1684273123585-2e429df780f9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] h-screen pt-8 flex justify-between flex-col w-full'>
-            <img className='w-16 ml-8' src="https://freelogopng.com/images/all_img/1659768779uber-logo-white.png" alt="" />
-            <div className='bg-white pb-7 py-4 px-4'>
-                <h2 className='text-3xl font-bold'>Get Started with Uber</h2>
-                <Link to={'/login'} className='flex items-center justify-center w-full bg-black text-white py-3 rounded mt-5'>Continue</Link>
-            </div>
+    <div className='h-screen relative'>
+      <img className='w-16 absolute left-5 top-5' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="" />
+      <div className='h-screen w-screen'>
+        <img className='h-full w-full object-cover' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT37XpQGtXhxI2-3P3MHoNMtMtzuzxIcqul4Q&s" alt="" />
+      </div>
+      <div className='absolute flex flex-col justify-end h-screen top-0 w-full '>
+        <div className='h-[30%] p-5 bg-white'>
+        <h4 className='text-2xl font-semibold'>Find a trip</h4>
+        <form>
+          <input className='bg-[#eeee] px-12 py-2 text-base rounded-lg w-full mt-5' type="text" placeholder='Add a pick-up location' />
+          <input className='bg-[#eeee] px-12 py-2 text-base rounded-lg w-full mt-3' type="text" placeholder='Enter your destination' />
+        </form>
         </div>
+        <div className='h-[70%] bg-red-600 hidden p-5'>
+
+        </div>
+      </div>
     </div>
   )
 }
